@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "One-page portfolio site; index.html is generated from README.md (see .cursor/rules).",
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "rebuild": "npm run build"
+  }
+}

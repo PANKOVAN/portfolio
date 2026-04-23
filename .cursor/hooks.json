@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/hooks/post-write-readme.ps1",
+        "matcher": "Write"
+      }
+    ]
+  }
+}
