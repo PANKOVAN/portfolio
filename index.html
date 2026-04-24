@@ -1,418 +1,547 @@
 <!DOCTYPE html>
 <html lang="ru" data-bs-theme="light">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Панков Андрей Николаевич — портфолио: MBuilder, КИ-Ц, СТУППК, EDM">
-  <title>Панков Андрей Николаевич — портфолио</title>
-  <!-- Bootstrap 5.3.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --pf-accent: #0d9488;
-      --pf-accent-2: #6366f1;
-      --pf-page-bg: #f4f6fa;
-      --pf-surface: #ffffff;
-    }
-    html { scroll-behavior: smooth; }
-    html, body {
-      background-color: var(--pf-page-bg) !important;
-      color-scheme: light;
-    }
-    body {
-      font-family: "DM Sans", system-ui, -apple-system, sans-serif;
-      background:
-        radial-gradient(1000px 520px at 8% -8%, rgba(99, 102, 241, 0.09), transparent 55%),
-        radial-gradient(800px 480px at 92% 4%, rgba(13, 148, 136, 0.08), transparent 50%),
-        var(--pf-page-bg) !important;
-      letter-spacing: -0.01em;
-    }
-    .font-mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
-    .hero {
-      padding-top: clamp(1.25rem, 4vw, 2.25rem);
-      padding-bottom: clamp(1.25rem, 5vw, 2.5rem);
-    }
-    .hero h1 {
-      font-size: clamp(2.25rem, 5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-    }
-    .gradient-text {
-      background: linear-gradient(120deg, var(--pf-accent), var(--pf-accent-2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .hero-lead {
-      max-width: 36rem;
-      font-size: 0.875rem;
-      line-height: 1.45;
-      color: rgba(100, 116, 139, 0.98);
-    }
-    .hero-photo {
-      width: 7.5rem;
-      height: 7.5rem;
-      object-fit: cover;
-      display: block;
-    }
-    @media (min-width: 992px) {
-      .hero-photo {
-        width: 8.5rem;
-        height: 8.5rem;
-      }
-    }
-    .section-anchor { scroll-margin-top: 0.75rem; }
-    .project-card {
-      background: var(--pf-surface) !important;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      border-radius: 0.125rem;
-      box-shadow: 0 4px 24px -8px rgba(15, 23, 42, 0.08);
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(13, 148, 136, 0.25);
-      box-shadow: 0 20px 40px -16px rgba(13, 148, 136, 0.15);
-    }
-    .side-panel {
-      background: rgba(248, 250, 252, 0.95) !important;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      border-radius: 0.125rem;
-    }
-    .shot {
-      border-radius: 0.125rem;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .shot-enlarge {
-      cursor: zoom-in;
-    }
-    .shot-enlarge:focus {
-      outline: 2px solid var(--pf-accent);
-      outline-offset: 2px;
-    }
-    #imagePreviewModal .img-enlarge-view {
-      max-width: 100%;
-      max-height: calc(100vh - 4rem);
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-    .pf-modal-dark {
-      background: rgba(15, 23, 42, 0.94);
-    }
-    .shot:hover {
-      transform: scale(1.01);
-      box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.2);
-    }
-    .badge-stack {
-      font-weight: 500;
-      font-size: 0.72rem;
-      letter-spacing: 0.02em;
-      padding: 0.4em 0.75em;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      background: rgba(255, 255, 255, 0.95) !important;
-      color: rgba(30, 41, 59, 0.92) !important;
-    }
-    .label-cap {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(71, 85, 105, 0.9);
-    }
-    footer {
-      border-top: 1px solid rgba(15, 23, 42, 0.08);
-      background: transparent !important;
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Панков Андрей Николаевич — портфолио: MBuilder, КИ-Ц, СТУППК, EDM">
+    <title>Панков Андрей Николаевич — портфолио</title>
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --pf-accent: #0d9488;
+            --pf-accent-2: #6366f1;
+            --pf-page-bg: #f4f6fa;
+            --pf-surface: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            background-color: var(--pf-page-bg) !important;
+            color-scheme: light;
+        }
+
+        body {
+            font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+            background:
+                radial-gradient(1000px 520px at 8% -8%, rgba(99, 102, 241, 0.09), transparent 55%),
+                radial-gradient(800px 480px at 92% 4%, rgba(13, 148, 136, 0.08), transparent 50%),
+                var(--pf-page-bg) !important;
+            letter-spacing: -0.01em;
+        }
+
+        .font-mono {
+            font-family: "JetBrains Mono", ui-monospace, monospace;
+        }
+
+        .hero {
+            padding-top: clamp(1.25rem, 4vw, 2.25rem);
+            padding-bottom: clamp(1.25rem, 5vw, 2.5rem);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--pf-accent), var(--pf-accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-lead {
+            max-width: 36rem;
+            font-size: 0.875rem;
+            line-height: 1.45;
+            color: rgba(100, 116, 139, 0.98);
+        }
+
+        .hero-photo {
+            width: 7.5rem;
+            height: 7.5rem;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (min-width: 992px) {
+            .hero-photo {
+                width: 8.5rem;
+                height: 8.5rem;
+            }
+        }
+
+        .section-anchor {
+            scroll-margin-top: 0.75rem;
+        }
+
+        .project-card {
+            background: var(--pf-surface) !important;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 0.125rem;
+            box-shadow: 0 4px 24px -8px rgba(15, 23, 42, 0.08);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(13, 148, 136, 0.25);
+            box-shadow: 0 20px 40px -16px rgba(13, 148, 136, 0.15);
+        }
+
+        .side-panel {
+            background: rgba(248, 250, 252, 0.95) !important;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 0.125rem;
+        }
+
+        .shot {
+            border-radius: 0.125rem;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .shot-enlarge {
+            cursor: zoom-in;
+        }
+
+        .shot-enlarge:focus {
+            outline: 2px solid var(--pf-accent);
+            outline-offset: 2px;
+        }
+
+        #imagePreviewModal .img-enlarge-view {
+            max-width: 100%;
+            max-height: calc(100vh - 4rem);
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .pf-modal-dark {
+            background: rgba(15, 23, 42, 0.94);
+        }
+
+        .shot:hover {
+            transform: scale(1.01);
+            box-shadow: 0 16px 32px -16px rgba(15, 23, 42, 0.2);
+        }
+
+        .badge-stack {
+            font-weight: 500;
+            font-size: 0.72rem;
+            letter-spacing: 0.02em;
+            padding: 0.4em 0.75em;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: rgba(30, 41, 59, 0.92) !important;
+        }
+
+        .label-cap {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(71, 85, 105, 0.9);
+        }
+
+        footer {
+            border-top: 1px solid rgba(15, 23, 42, 0.08);
+            background: transparent !important;
+        }
+
+        likec4-view {
+            display: block;
+            min-height: 22rem;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header class="hero">
-    <div class="container">
-      <div class="row g-3 g-lg-4 align-items-start">
-        <div class="col-auto flex-shrink-0">
-          <img src="photo.png" alt="" class="hero-photo rounded-1 border" width="136" height="136" decoding="async">
+    <header class="hero">
+        <div class="container">
+            <div class="row g-3 g-lg-4 align-items-start">
+                <div class="col-auto flex-shrink-0">
+                    <img src="photo.png" alt="" class="hero-photo rounded-1 border" width="136" height="136"
+                        decoding="async">
+                </div>
+                <div class="col min-w-0 overflow-hidden">
+                    <h1 class="text-dark mb-2 h2 fw-bold">Панков Андрей Николаевич</h1>
+                    <p class="label-cap mb-2">Контакты</p>
+                    <div class="d-flex flex-wrap column-gap-4 row-gap-2 small mb-3">
+                        <div>
+                            <span class="text-secondary d-block">Телефон</span>
+                            <a class="link-body-emphasis text-decoration-none" href="tel:+79037470303">+7 903
+                                747-03-03</a>
+                        </div>
+                        <div>
+                            <span class="text-secondary d-block">Почта</span>
+                            <a class="link-body-emphasis text-decoration-none"
+                                href="mailto:pankovan@yandex.ru">pankovan@yandex.ru</a>
+                        </div>
+                        <div>
+                            <span class="text-secondary d-block">Телеграм</span>
+                            <a class="link-body-emphasis text-decoration-none" href="https://t.me/apan388"
+                                target="_blank" rel="noopener noreferrer">@apan388</a>
+                        </div>
+                    </div>
+                    <p class="hero-lead mb-0 text-break">Подборка внедрений по разным направлениям: высоконагруженные
+                        сервисы, 3D и веб-платформы, маршрутизация процессов и унификация работы с данными</p>
+                </div>
+            </div>
         </div>
-        <div class="col min-w-0 overflow-hidden">
-          <h1 class="text-dark mb-2 h2 fw-bold">Панков Андрей Николаевич</h1>
-          <p class="label-cap mb-2">Контакты</p>
-          <div class="d-flex flex-wrap column-gap-4 row-gap-2 small mb-3">
-            <div>
-              <span class="text-secondary d-block">Телефон</span>
-              <a class="link-body-emphasis text-decoration-none" href="tel:+79037470303">+7 903 747-03-03</a>
+    </header>
+
+    <main class="pb-3">
+        <section id="mbuilder" class="section-anchor py-3">
+            <div class="container">
+                <div class="project-card p-3 p-lg-4 mb-2">
+                    <h2 class="h3 fw-bold text-dark mb-2">MBuilder</h2>
+                    <div class="row g-3 g-lg-4 align-items-start">
+                        <div class="col-lg-7">
+                            <p class="text-secondary-emphasis mb-0">Платформа для создания интерактивных электронных
+                                технических руководств (ИЭТР). Контент интерактивных руководств разрабатывается на
+                                основе конструкторской, технологической и нормативной документации, включает в себя 3D
+                                интерактивный иерархический каталог деталей и узлов оборудования, снабженный подробной
+                                текстовой и графической информацией о вариантах исполнения, материалах, нормах допусков,
+                                технологическом процессе обслуживания и ремонта, оснастке и инструменте. 3D
+                                представление позволяет лучше понять конструкцию изделия и обеспечить наглядность работы
+                                ее узлов и деталей. MBuilder позволяет отображать данные, представленные в самых разных
+                                форматах: HTML, MD, PDF, XML, JSON, 3D (SMG, GLTF, STL, VRML), SVG, JPG, PNG, AVI и т.д.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 side-panel">
+                                <p class="small text-info mb-1 fw-semibold">Роль</p>
+                                <p class="text-body-secondary small mb-2">Аналитик / Архитектор / TeamLead, начиная с
+                                    1-ой версии продукта, все это время проект успешно развивался, сейчас внедряется
+                                    четвертая версия. Разрабатывал архитектуру, определял технологии и форматы данных,
+                                    написал наиболее сложные части кода системы, в частности, обработку и отображение
+                                    3D.</p>
+                                <p class="small text-info mb-1 fw-semibold">Результат</p>
+                                <p class="text-body-secondary small mb-2">Внедрение последней версии продукта позволило
+                                    перейти от специального приложения к web, которое работает на любых браузерах и
+                                    устройствах. Внедрил новые форматы 3D моделей, что позволило сократить объем
+                                    последних от 20 до 100 раз без потери качества. Разработал новые встроенные
+                                    редакторы взамен внешних, требовавших приобретения дополнительных лицензий.</p>
+                                <p class="small text-info mb-2 fw-semibold">Стек</p>
+                                <p class="hero-lead mb-2">Версия 4.0</p>
+                                <div class="d-flex flex-wrap gap-2 font-mono">
+                                    <span class="badge badge-stack rounded-1">NODE JS</span>
+                                    <span class="badge badge-stack rounded-1">JavaScript</span>
+                                    <span class="badge badge-stack rounded-1">C#</span>
+                                    <span class="badge badge-stack rounded-1">Postgre SQL</span>
+                                    <span class="badge badge-stack rounded-1">Express</span>
+                                    <span class="badge badge-stack rounded-1">OpenUI5</span>
+                                    <span class="badge badge-stack rounded-1">Monaco Editor</span>
+                                    <span class="badge badge-stack rounded-1">3D(GLTF)</span>
+                                    <span class="badge badge-stack rounded-1">2D(SVG)</span>
+                                    <span class="badge badge-stack rounded-1">HTML</span>
+                                    <span class="badge badge-stack rounded-1">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="label-cap mb-2 mt-2 pt-1">Примеры экранов</p>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="mb4.jpeg" width="640" height="400"
+                                alt="Экран MBuilder 1" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Спецификация изделия и вид с разнесенными частями (3D)</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="mb3.jpeg" width="640" height="400"
+                                alt="Экран MBuilder 2" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Электронный каталог и с просмотром текущей сборки</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="mb1.png" width="640" height="400"
+                                alt="Экран MBuilder 3" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Правка спецификации с предварительным просмотром результата</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <span class="text-secondary d-block">Почта</span>
-              <a class="link-body-emphasis text-decoration-none" href="mailto:pankovan@yandex.ru">pankovan@yandex.ru</a>
+        </section>
+
+        <section id="kic" class="section-anchor py-3">
+            <div class="container">
+                <div class="project-card p-3 p-lg-4 mb-2">
+                    <h2 class="h3 fw-bold text-dark mb-2">КИ-Ц САИ ПС.ИНП</h2>
+                    <div class="row g-3 g-lg-4 align-items-start">
+                        <div class="col-lg-7">
+                            <p class="text-secondary-emphasis mb-2">Концентратор информации центрального уровня
+                                предназначен для отслеживания в реальном времени прохождений железнодорожного подвижного
+                                состава через контрольные пункты. Сервис должен</p>
+                            <ul class="text-secondary-emphasis">
+                                <li class="mb-2">обеспечивать нагрузку более 100 000 проездов в сутки</li>
+                                <li class="mb-2">расшифровку и анализ сообщений о проездах с учетом возможных ошибок и
+                                    неправильной настройки оборудования</li>
+                                <li class="mb-2">расшифровку и анализ сообщений о состояние специального оборудования
+                                </li>
+                                <li class="mb-2">получения дополнительной информации из смежных сервисов РЖД</li>
+                                <li class="mb-2">хеширования данных для ускорения работы</li>
+                                <li class="mb-2">сохранения данных в БД для контроля работы сервиса и оборудования</li>
+                                <li class="mb-2">передачу расшифрованных данных и данных об ошибках в смежные системы
+                                </li>
+                                <li class="mb-2">сбор статистической информации для исправления ошибок</li>
+                                <li class="mb-2">сбор данных для логирования ошибок и мониторинга нагрузки</li>
+                                <li class="mb-0">поддержку клиентской части (SPA) для контроля и управления</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 side-panel">
+                                <p class="small text-info mb-1 fw-semibold">Роль</p>
+                                <p class="text-body-secondary small mb-2">Аналитик / Архитектор / TeamLead.
+                                    Спроектировал архитектуру системы, базу данны, определил средства разработки.
+                                    Выписал основные рабочие процессы. Использовал статистические алгоритмы для
+                                    нивелирования ошибок, связанных с некорректной настройкой оборудования.</p>
+                                <p class="small text-info mb-1 fw-semibold">Результат</p>
+                                <p class="text-body-secondary small mb-2">Система внедрена и работает, нагрузку держит.
+                                    Сдать удалось благодаря красивой и убедительной картинке о результатах расшифровки
+                                    (в ТЗ не было), поэтому вопросов о достоверности результатов не возникло.</p>
+                                <p class="small text-info mb-2 fw-semibold">Стек</p>
+                                <div class="d-flex flex-wrap gap-2 font-mono">
+                                    <span class="badge badge-stack rounded-1">NODE JS</span>
+                                    <span class="badge badge-stack rounded-1">JavaScript</span>
+                                    <span class="badge badge-stack rounded-1">PostgreSQL</span>
+                                    <span class="badge badge-stack rounded-1">Redis</span>
+                                    <span class="badge badge-stack rounded-1">IBM MQ</span>
+                                    <span class="badge badge-stack rounded-1">Express</span>
+                                    <span class="badge badge-stack rounded-1">HTML</span>
+                                    <span class="badge badge-stack rounded-1">CSS</span>
+                                    <span class="badge badge-stack rounded-1">D3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="label-cap mb-2 mt-2 pt-1">Примеры экранов:</p>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="kic1.jpg" width="640" height="400"
+                                alt="Экран КИ-Ц 2" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Данные от датчиков</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="kic2.jpg" width="640" height="400"
+                                alt="Экран КИ-Ц 2" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Это процесс и результат расшифровки</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="KIC-1.png" width="640" height="400"
+                                alt="Экран КИ-Ц 1" loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Мониторинг процесса</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <span class="text-secondary d-block">Телеграм</span>
-              <a class="link-body-emphasis text-decoration-none" href="https://t.me/apan388" target="_blank" rel="noopener noreferrer">@apan388</a>
+        </section>
+
+        <section id="kic-documentation" class="section-anchor py-3">
+            <div class="container">
+                <div class="project-card p-3 p-lg-4 mb-2">
+                    <h2 class="h3 fw-bold text-dark mb-2">КИ-Ц САИ ПС.ИНП (документация)</h2>
+                    <p class="hero-lead mb-3 text-break">Ниже приведён пример оформления документации, вырванный из
+                        технического задания, с использованием диаграмм C4. Все диаграммы можно посмотреть по <a
+                            class="link-secondary" href="https://pankovan.github.io/C4/viewer/" target="_blank"
+                            rel="noopener noreferrer">ссылке</a></p>
+                    <p class="text-secondary-emphasis fst-italic mb-3">. . .</p>
+                    <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.3 Структура взаимодействия отдельных подсистем КИ Ц
+                        САИ ПС.ИНП со смежными системами ОАО «РЖД».</h3>
+
+                    <script type="module" src="https://pankovan.github.io/C4/viewer/likec4-views.js"></script>
+                    <likec4-view view-id="index" browser="true" dynamic-variant="sequence"></likec4-view>
+
+                    <p class="hero-lead mb-3 mt-2">Рисунок 4 –Взаимодействие подсистем КИ-Ц САИ ПС.ИНП со смежными
+                        системами</p>
+                    <p class="text-secondary-emphasis mb-2">Сведения о проследовании подвижным составом пунктов
+                        считывания направляются КИ-Л САИ ПС в очередь бинарных сообщений P.SAIB, сведения о состоянии и
+                        работоспособности технических средств САИ ПС направляются КИ-Л САИ ПС в очередь бинарных
+                        сообщений P.SAIS, и должны приниматься из указанных очередей средствами КИ Ц САИ ПС.ИНП. Для
+                        тестового полигона должна быть организована средствами АСУ АОС специальная очередь исходящих
+                        сообщений, сформированная администратором АСУ АОС на основе ранее полученных сообщений.</p>
+                    <p class="text-secondary-emphasis mb-2">Исходящая информация о проследовании поездами остановочных
+                        пунктов должна передаваться КИ Ц САИ ПС.ИНП сообщениями 2033 в очередь выходных сообщений для
+                        отправки средствами АСУ АОС в АСОУП (АСОУП-3). Для тестового полигона выходной поток будет
+                        записываться в тестовую очередь MQ для анализа и просмотра.</p>
+                    <p class="text-secondary-emphasis mb-3">Для расшифровки и верификации состава поезда в КИ Ц САИ
+                        ПС.ИНП должна быть реализована функциональность запроса данных о составе поезда из АСОУП (с
+                        использованием хранимой процедуры АСОУП-3 / соответствующего сервиса ЕМД ПП).</p>
+                    <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.4 Требования к механизмам диагностирования и
+                        мониторинга работы системы</h3>
+                    <p class="text-secondary-emphasis mb-2">Основной задачей системы мониторинга является
+                        автоматизированный контроль работоспособности системы как в целом, так и конкретных показателей
+                        функционирования в режиме времени, приближенном к реальному.<br>Мониторинг системы должен
+                        осуществляться на следующих уровнях:</p>
+                    <p class="text-secondary-emphasis fst-italic mb-0">. . .</p>
+                </div>
             </div>
-          </div>
-          <p class="hero-lead mb-0 text-break">Подборка внедрений по разным направлениям: высоконагруженные сервисы, 3D и веб-платформы, маршрутизация процессов и унификация работы с данными</p>
+        </section>
+
+        <section id="stuppk" class="section-anchor py-3">
+            <div class="container">
+                <div class="project-card p-3 p-lg-4 mb-2">
+                    <h2 class="h3 fw-bold text-dark mb-2">СТУППК</h2>
+                    <div class="row g-3 g-lg-4 align-items-start">
+                        <div class="col-lg-7">
+                            <p class="text-secondary-emphasis mb-0">Система технологического управления пригородным
+                                пассажирским комплексом РЖД (ППК) предназначена для автоматизации существующих
+                                бизнес-процессов деятельности ППК в части обработки обращений граждан и организаций по
+                                состоянию ППК, маршрутизации обращений, контроля исполнения поручений, паспортизации
+                                пассажирских обустройств, планирования и мониторинга осмотров и ремонтов объектов
+                                пригородной инфраструктуры.</p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 side-panel">
+                                <p class="small text-info mb-1 fw-semibold">Роль</p>
+                                <p class="text-body-secondary small mb-2">Архитектор / Lead Full-Stack разработчик.
+                                    Разработал алгоритмы и реализовал функционал оперативной регистрации и маршрутизации
+                                    обращений. Подготовил, согласовал и реализовал интеграционные решения для
+                                    взаимодействия со смежными системами РЖД – параллельными источниками обращений.</p>
+                                <p class="small text-info mb-1 fw-semibold">Результат</p>
+                                <p class="text-body-secondary small mb-2">Оптимизационный алгоритм маршрутизации
+                                    обращений позволил назначать конечного ответственного в 8 раз быстрее. Способ
+                                    хранения и представления различных типов данных, позволили обрабатывать обращения в
+                                    нормативные сроки и сократить объем повторных обращений на 40 %.</p>
+                                <p class="small text-info mb-2 fw-semibold">Средства разработки</p>
+                                <div class="d-flex flex-wrap gap-2 font-mono">
+                                    <span class="badge badge-stack rounded-1">PHP</span>
+                                    <span class="badge badge-stack rounded-1">JavaScript</span>
+                                    <span class="badge badge-stack rounded-1">C#</span>
+                                    <span class="badge badge-stack rounded-1">Postgre SQL</span>
+                                    <span class="badge badge-stack rounded-1">HTML</span>
+                                    <span class="badge badge-stack rounded-1">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="edm" class="section-anchor py-3">
+            <div class="container">
+                <div class="project-card p-3 p-lg-4 mb-2">
+                    <h2 class="h3 fw-bold text-dark mb-2">EDM (Entity Data Model)</h2>
+                    <div class="row g-3 g-lg-4 align-items-start">
+                        <div class="col-lg-7">
+                            <p class="text-secondary-emphasis mb-2">ORM библиотека, предназначенная для разработки
+                                клиент-серверных приложений с трехзвенной архитектурой, которая позволяет:</p>
+                            <ul class="text-secondary-emphasis mb-0">
+                                <li class="mb-2">описывать модель данных</li>
+                                <li class="mb-2">создавать базу данных или делать изменения в существующей БД по модели
+                                    данных</li>
+                                <li class="mb-2">создавать классы и объекты данных, используя модель данных</li>
+                                <li class="mb-2">создавать конфигурации - специальные структуры для хранения различного
+                                    рода настроек и определений</li>
+                                <li class="mb-2">задействовать в одном проекте несколько баз данных</li>
+                                <li class="mb-2">выполнять запросы к базе данных и делать изменения</li>
+                                <li class="mb-2">автоматически строить запросы по модели данных</li>
+                                <li class="mb-2">использовать специальные шаблоны для построения сложных динамических
+                                    запросов по переданным параметрам</li>
+                                <li class="mb-2">передавать на сервер и возвращать результаты запроса к базе в виде
+                                    сложной структуры связанных объекты (любой объект может содержать ссылки на другие
+                                    объекты или списки связанных объектов)</li>
+                                <li class="mb-2">использовать как на клиенте, так и на сервере одни и те же объекты
+                                    данных</li>
+                                <li class="mb-2">использовать информацию о модели данных для построения форм, фильтров,
+                                    отчетов и т.д.</li>
+                                <li class="mb-0">использовать систему ролей и маркеров доступа, для разграничения
+                                    доступа к данным</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 side-panel">
+                                <p class="small text-info mb-1 fw-semibold">Роль</p>
+                                <p class="text-body-secondary small mb-2">Архитектор / разработчик.</p>
+                                <p class="small text-info mb-1 fw-semibold">Результат</p>
+                                <p class="text-body-secondary small mb-2">Внедрение библиотеки позволило унифицировать
+                                    способы работы с данными, как на стороне сервера, так и на стороне клиента,
+                                    значительно сократить затраты при реализации различных проектов.</p>
+                                <p class="small text-info mb-2 fw-semibold">Средства разработки</p>
+                                <div class="d-flex flex-wrap gap-2 font-mono">
+                                    <span class="badge badge-stack rounded-1">NODE JS</span>
+                                    <span class="badge badge-stack rounded-1">JavaScript</span>
+                                    <span class="badge badge-stack rounded-1">Postgre SQL</span>
+                                    <span class="badge badge-stack rounded-1">SQLLite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-3 mt-1">
+        <div class="container small text-secondary text-center">Портфолио · содержимое по README.md</div>
+    </footer>
+
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content pf-modal-dark border-0 rounded-0">
+                <div class="modal-header border-0 py-2 flex-shrink-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center p-2 p-md-3 overflow-auto">
+                    <img id="imagePreviewModalImg" class="img-enlarge-view rounded-1" src="" alt="">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
 
-  <main class="pb-3">
-    <section id="mbuilder" class="section-anchor py-3">
-      <div class="container">
-        <div class="project-card p-3 p-lg-4 mb-2">
-          <h2 class="h3 fw-bold text-dark mb-2">MBuilder</h2>
-          <div class="row g-3 g-lg-4 align-items-start">
-            <div class="col-lg-7">
-              <p class="text-secondary-emphasis mb-0">Платформа для создания интерактивных электронных технических руководств (ИЭТР). Контент интерактивных руководств разрабатывается на основе конструкторской, технологической и нормативной документации, включает в себя 3D интерактивный иерархический каталог деталей и узлов оборудования, снабженный подробной текстовой и графической информацией о вариантах исполнения, материалах, нормах допусков, технологическом процессе обслуживания и ремонта, оснастке и инструменте. 3D представление позволяет лучше понять конструкцию изделия и обеспечить наглядность работы ее узлов и деталей. MBuilder позволяет отображать данные, представленные в самых разных форматах: HTML, MD, PDF, XML, JSON, 3D (SMG, GLTF, STL, VRML), SVG, JPG, PNG, AVI и т.д.</p>
-            </div>
-            <div class="col-lg-5">
-              <div class="p-4 side-panel">
-                <p class="small text-info mb-1 fw-semibold">Роль</p>
-                <p class="text-body-secondary small mb-2">Аналитик / Архитектор / TeamLead, начиная с 1-ой версии продукта, все это время проект успешно развивался, сейчас внедряется четвертая версия. Разрабатывал архитектуру, определял технологии и форматы данных, написал наиболее сложные части кода системы, в частности, обработку и отображение 3D.</p>
-                <p class="small text-info mb-1 fw-semibold">Результат</p>
-                <p class="text-body-secondary small mb-2">Внедрение последней версии продукта позволило перейти от специального приложения к web, которое работает на любых браузерах и устройствах. Внедрил новые форматы 3D моделей, что позволило сократить объем последних от 20 до 100 раз без потери качества. Разработал новые встроенные редакторы взамен внешних, требовавших приобретения дополнительных лицензий.</p>
-                <p class="small text-info mb-2 fw-semibold">Стек</p>
-                <p class="hero-lead mb-2">Версия 4.0</p>
-                <div class="d-flex flex-wrap gap-2 font-mono">
-                  <span class="badge badge-stack rounded-1">NODE JS</span>
-                  <span class="badge badge-stack rounded-1">JavaScript</span>
-                  <span class="badge badge-stack rounded-1">C#</span>
-                  <span class="badge badge-stack rounded-1">Postgre SQL</span>
-                  <span class="badge badge-stack rounded-1">Express</span>
-                  <span class="badge badge-stack rounded-1">OpenUI5</span>
-                  <span class="badge badge-stack rounded-1">Monaco Editor</span>
-                  <span class="badge badge-stack rounded-1">3D(GLTF)</span>
-                  <span class="badge badge-stack rounded-1">2D(SVG)</span>
-                  <span class="badge badge-stack rounded-1">HTML</span>
-                  <span class="badge badge-stack rounded-1">CSS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="label-cap mb-2 mt-2 pt-1">Примеры экранов</p>
-          <div class="row g-3">
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Спецификация изделия и вид с разнесенными частями (3D)</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="mb4.jpeg" width="640" height="400" alt="Экран MBuilder 1" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Электронный каталог и с просмотром текущей сборки</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="mb3.jpeg" width="640" height="400" alt="Экран MBuilder 2" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Правка спецификации с предварительным просмотром результата</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="mb1.png" width="640" height="400" alt="Экран MBuilder 3" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kic" class="section-anchor py-3">
-      <div class="container">
-        <div class="project-card p-3 p-lg-4 mb-2">
-          <h2 class="h3 fw-bold text-dark mb-2">КИ-Ц САИ ПС.ИНП</h2>
-          <div class="row g-3 g-lg-4 align-items-start">
-            <div class="col-lg-7">
-              <p class="text-secondary-emphasis mb-2">Концентратор информации центрального уровня предназначен для отслеживания в реальном времени прохождений железнодорожного подвижного состава через контрольные пункты. Сервис должен</p>
-              <ul class="text-secondary-emphasis">
-                <li class="mb-2">обеспечивать нагрузку более 100 000 проездов в сутки</li>
-                <li class="mb-2">расшифровку и анализ сообщений о проездах с учетом возможных ошибок и неправильной настройки оборудования</li>
-                <li class="mb-2">расшифровку и анализ сообщений о состояние специального оборудования</li>
-                <li class="mb-2">получения дополнительной информации из смежных сервисов РЖД</li>
-                <li class="mb-2">хеширования данных для ускорения работы</li>
-                <li class="mb-2">сохранения данных в БД для контроля работы сервиса и оборудования</li>
-                <li class="mb-2">передачу расшифрованных данных и данных об ошибках в смежные системы</li>
-                <li class="mb-2">сбор статистической информации для исправления ошибок</li>
-                <li class="mb-2">сбор данных для логирования ошибок и мониторинга нагрузки</li>
-                <li class="mb-0">поддержку клиентской части (SPA) для контроля и управления</li>
-              </ul>
-            </div>
-            <div class="col-lg-5">
-              <div class="p-4 side-panel">
-                <p class="small text-info mb-1 fw-semibold">Роль</p>
-                <p class="text-body-secondary small mb-2">Аналитик / Архитектор / TeamLead. Спроектировал архитектуру системы, базу данны, определил средства разработки. Выписал основные рабочие процессы. Использовал статистические алгоритмы для нивелирования ошибок, связанных с некорректной настройкой оборудования.</p>
-                <p class="small text-info mb-1 fw-semibold">Результат</p>
-                <p class="text-body-secondary small mb-2">Система внедрена и работает, нагрузку держит. Сдать удалось благодаря красивой и убедительной картинке о результатах расшифровки (в ТЗ не было), поэтому вопросов о достоверности результатов не возникло.</p>
-                <p class="small text-info mb-2 fw-semibold">Стек</p>
-                <div class="d-flex flex-wrap gap-2 font-mono">
-                  <span class="badge badge-stack rounded-1">NODE JS</span>
-                  <span class="badge badge-stack rounded-1">JavaScript</span>
-                  <span class="badge badge-stack rounded-1">PostgreSQL</span>
-                  <span class="badge badge-stack rounded-1">Redis</span>
-                  <span class="badge badge-stack rounded-1">IBM MQ</span>
-                  <span class="badge badge-stack rounded-1">Express</span>
-                  <span class="badge badge-stack rounded-1">HTML</span>
-                  <span class="badge badge-stack rounded-1">CSS</span>
-                  <span class="badge badge-stack rounded-1">D3</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="label-cap mb-2 mt-2 pt-1">Примеры экранов</p>
-          <div class="row g-3">
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Данные от датчиков</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="kic1.jpg" width="640" height="400" alt="Экран КИ-Ц 2" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Это процесс и результат расшифровки</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="kic2.jpg" width="640" height="400" alt="Экран КИ-Ц 2" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-            <div class="col-md-4">
-              <p class="small text-secondary mb-2">Мониторинг процесса</p>
-              <img class="img-fluid shot shot-enlarge w-100" src="KIC-1.png" width="640" height="400" alt="Экран КИ-Ц 1" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kic-documentation" class="section-anchor py-3">
-      <div class="container">
-        <div class="project-card p-3 p-lg-4 mb-2">
-          <h2 class="h3 fw-bold text-dark mb-2">КИ-Ц САИ ПС.ИНП (документация)</h2>
-          <p class="hero-lead mb-3 text-break">Ниже приведён пример оформления документации, вырванный из технического задания, с использованием диаграмм C4. Все диаграммы можно посмотреть по <a class="link-secondary" href="https://pankovan.github.io/C4/viewer/" target="_blank" rel="noopener noreferrer">ссылке</a></p>
-          <p class="text-secondary-emphasis fst-italic mb-3">. . .</p>
-          <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.3 Структура взаимодействия отдельных подсистем КИ Ц САИ ПС.ИНП со смежными системами ОАО «РЖД».</h3>
-          <div class="mb-3">
-            <img class="img-fluid shot shot-enlarge w-100" src="c4.png" width="960" height="540" alt="c4-diagram" loading="lazy" tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
-            <p class="hero-lead mb-0 mt-2">Рисунок 4 –Взаимодействие подсистем КИ-Ц САИ ПС.ИНП со смежными системами</p>
-          </div>
-          <p class="text-secondary-emphasis mb-2">Сведения о проследовании подвижным составом пунктов считывания направляются КИ-Л САИ ПС в очередь бинарных сообщений P.SAIB, сведения о состоянии и работоспособности технических средств САИ ПС  направляются КИ-Л САИ ПС в очередь бинарных сообщений P.SAIS, и должны приниматься из указанных очередей средствами КИ Ц САИ ПС.ИНП. Для тестового полигона должна быть организована средствами АСУ АОС специальная очередь исходящих сообщений, сформированная администратором АСУ АОС на основе ранее полученных сообщений.</p>
-          <p class="text-secondary-emphasis mb-2">Исходящая информация о проследовании поездами остановочных пунктов должна передаваться КИ Ц САИ ПС.ИНП сообщениями 2033 в очередь выходных сообщений для отправки средствами АСУ АОС в АСОУП (АСОУП-3).  Для тестового полигона выходной поток будет записываться в тестовую очередь MQ для анализа и просмотра.</p>
-          <p class="text-secondary-emphasis mb-2">Для расшифровки и верификации состава поезда в КИ Ц САИ ПС.ИНП должна быть реализована функциональность запроса данных о составе поезда из АСОУП (с использованием хранимой процедуры АСОУП-3 / соответствующего сервиса ЕМД ПП).</p>
-          <p class="text-secondary-emphasis mb-2">Для поддержания в актуальном состоянии НСИ, в частности, сведений о дорогах, остановочных пунктах, КИ Ц САИ ПС.ИНП должен взаимодействовать с системой АС ЦНСИ. Для загрузки данных таблиц IC00.DOR, IC00.STAN, IC00.STAN_ATR IC00.STAN_ATR, IC00.VAG_MOD, IC00.LOCSER_ATR, DIC_OBJECTS должен использоваться вызов хранимой процедуры @LNSI01.GETNSI.</p>
-          <p class="text-secondary-emphasis mb-3">В КИ Ц САИ ПС.ИНП должна быть организована загрузка справочных данных о серии, номере, индексе секций подвижного состава по 8-значному номеру КБД по локомотивам от ЕС ПУЛ с использованием сервисов ZPUL_ISOP_STATUS_EO (получение данных одного локомотива), ZPUL_F_GET_LOCS (получение данных выбранной группы локомотивов), ZPUL_ISOP_ASOUP_CHG_HIS_SEND (получение сведений об изменении данных локомотивного парка).</p>
-          <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.4 Требования к механизмам диагностирования и мониторинга работы системы</h3>
-          <p class="text-secondary-emphasis mb-2">Основной задачей системы мониторинга является автоматизированный контроль работоспособности системы как в целом, так и конкретных показателей функционирования в режиме времени, приближенном к реальному.<br>Мониторинг системы должен осуществляться на следующих уровнях:</p>
-          <p class="text-secondary-emphasis fst-italic mb-0">. . .</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="stuppk" class="section-anchor py-3">
-      <div class="container">
-        <div class="project-card p-3 p-lg-4 mb-2">
-          <h2 class="h3 fw-bold text-dark mb-2">СТУППК</h2>
-          <div class="row g-3 g-lg-4 align-items-start">
-            <div class="col-lg-7">
-              <p class="text-secondary-emphasis mb-0">Система технологического управления пригородным пассажирским комплексом РЖД (ППК) предназначена для автоматизации существующих бизнес-процессов деятельности ППК в части обработки обращений граждан и организаций по состоянию ППК, маршрутизации обращений, контроля исполнения поручений, паспортизации пассажирских обустройств, планирования и мониторинга осмотров и ремонтов объектов пригородной инфраструктуры.</p>
-            </div>
-            <div class="col-lg-5">
-              <div class="p-4 side-panel">
-                <p class="small text-info mb-1 fw-semibold">Роль</p>
-                <p class="text-body-secondary small mb-2">Архитектор / Lead Full-Stack разработчик. Разработал алгоритмы и реализовал функционал оперативной регистрации и маршрутизации обращений. Подготовил, согласовал и реализовал интеграционные решения для взаимодействия со смежными системами РЖД – параллельными источниками обращений.</p>
-                <p class="small text-info mb-1 fw-semibold">Результат</p>
-                <p class="text-body-secondary small mb-2">Оптимизационный алгоритм маршрутизации обращений позволил назначать конечного ответственного в 8 раз быстрее. Способ хранения и представления различных типов данных, позволили обрабатывать обращения в нормативные сроки и сократить объем повторных обращений на 40 %.</p>
-                <p class="small text-info mb-2 fw-semibold">Средства разработки</p>
-                <div class="d-flex flex-wrap gap-2 font-mono">
-                  <span class="badge badge-stack rounded-1">PHP</span>
-                  <span class="badge badge-stack rounded-1">JavaScript</span>
-                  <span class="badge badge-stack rounded-1">C#</span>
-                  <span class="badge badge-stack rounded-1">Postgre SQL</span>
-                  <span class="badge badge-stack rounded-1">HTML</span>
-                  <span class="badge badge-stack rounded-1">CSS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="edm" class="section-anchor py-3">
-      <div class="container">
-        <div class="project-card p-3 p-lg-4 mb-2">
-          <h2 class="h3 fw-bold text-dark mb-2">EDM (Entity Data Model)</h2>
-          <div class="row g-3 g-lg-4 align-items-start">
-            <div class="col-lg-7">
-              <p class="text-secondary-emphasis mb-2">ORM библиотека, предназначенная для разработки клиент-серверных приложений с трехзвенной архитектурой, которая позволяет:</p>
-              <ul class="text-secondary-emphasis mb-0">
-                <li class="mb-2">описывать модель данных</li>
-                <li class="mb-2">создавать базу данных или делать изменения в существующей БД по модели данных</li>
-                <li class="mb-2">создавать классы и объекты данных, используя модель данных</li>
-                <li class="mb-2">создавать конфигурации - специальные структуры для хранения различного рода настроек и определений</li>
-                <li class="mb-2">задействовать в одном проекте несколько баз данных</li>
-                <li class="mb-2">выполнять запросы к базе данных и делать изменения</li>
-                <li class="mb-2">автоматически строить запросы по модели данных</li>
-                <li class="mb-2">использовать специальные шаблоны для построения сложных динамических запросов по переданным параметрам</li>
-                <li class="mb-2">передавать на сервер и возвращать результаты запроса к базе в виде сложной структуры связанных объекты (любой объект может содержать ссылки на другие объекты или списки связанных объектов)</li>
-                <li class="mb-2">использовать как на клиенте, так и на сервере одни и те же объекты данных</li>
-                <li class="mb-2">использовать информацию о модели данных для построения форм, фильтров, отчетов и т.д.</li>
-                <li class="mb-0">использовать систему ролей и маркеров доступа, для разграничения доступа к данным</li>
-              </ul>
-            </div>
-            <div class="col-lg-5">
-              <div class="p-4 side-panel">
-                <p class="small text-info mb-1 fw-semibold">Роль</p>
-                <p class="text-body-secondary small mb-2">Архитектор / разработчик.</p>
-                <p class="small text-info mb-1 fw-semibold">Результат</p>
-                <p class="text-body-secondary small mb-2">Внедрение библиотеки позволило унифицировать способы работы с данными, как на стороне сервера, так и на стороне клиента, значительно сократить затраты при реализации различных проектов.</p>
-                <p class="small text-info mb-2 fw-semibold">Средства разработки</p>
-                <div class="d-flex flex-wrap gap-2 font-mono">
-                  <span class="badge badge-stack rounded-1">NODE JS</span>
-                  <span class="badge badge-stack rounded-1">JavaScript</span>
-                  <span class="badge badge-stack rounded-1">Postgre SQL</span>
-                  <span class="badge badge-stack rounded-1">SQLLite</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="py-3 mt-1">
-    <div class="container small text-secondary text-center">Портфолио · содержимое по README.md</div>
-  </footer>
-
-  <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content pf-modal-dark border-0 rounded-0">
-        <div class="modal-header border-0 py-2 flex-shrink-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-        </div>
-        <div class="modal-body d-flex align-items-center justify-content-center p-2 p-md-3 overflow-auto">
-          <img id="imagePreviewModalImg" class="img-enlarge-view rounded-1" src="" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap 5.3.3 bundle (Popper included) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script>
-    (function () {
-      var modalEl = document.getElementById('imagePreviewModal');
-      var modalImg = document.getElementById('imagePreviewModalImg');
-      if (!modalEl || !modalImg || typeof bootstrap === 'undefined') return;
-      var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-      function openFrom(img) {
-        modalImg.src = img.currentSrc || img.src;
-        modalImg.alt = img.alt || '';
-        modal.show();
-      }
-      document.querySelectorAll('img.shot-enlarge').forEach(function (img) {
-        img.addEventListener('click', function () { openFrom(img); });
-        img.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openFrom(img);
-          }
-        });
-      });
-      modalEl.addEventListener('hidden.bs.modal', function () {
-        modalImg.removeAttribute('src');
-        modalImg.alt = '';
-      });
-    })();
-  </script>
+    <!-- Bootstrap 5.3.3 bundle (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var modalEl = document.getElementById('imagePreviewModal');
+            var modalImg = document.getElementById('imagePreviewModalImg');
+            if (!modalEl || !modalImg || typeof bootstrap === 'undefined') return;
+            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            function openFrom(img) {
+                modalImg.src = img.currentSrc || img.src;
+                modalImg.alt = img.alt || '';
+                modal.show();
+            }
+            document.querySelectorAll('img.shot-enlarge').forEach(function (img) {
+                img.addEventListener('click', function () { openFrom(img); });
+                img.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openFrom(img);
+                    }
+                });
+            });
+            modalEl.addEventListener('hidden.bs.modal', function () {
+                modalImg.removeAttribute('src');
+                modalImg.alt = '';
+            });
+        })();
+    </script>
 </body>
+
 </html>
