@@ -125,20 +125,15 @@
         }
 
         #imagePreviewModal .modal-content {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100%;
         }
 
-        #imagePreviewModal .modal-body.img-preview-modal-body {
-            display: flex;
-            flex-direction: column;
+        #imagePreviewModal .modal-body {
             flex: 1 1 auto;
             min-height: 0;
             overflow-y: auto;
-            overflow-x: hidden;
-            align-items: center;
-            justify-content: flex-start;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -146,9 +141,9 @@
             width: 90%;
             max-width: 90%;
             height: auto;
-            max-height: none;
-            flex-shrink: 0;
             display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .pf-modal-dark {
@@ -403,7 +398,8 @@
                             <p class="hero-lead mb-0">Пример использования диаграмм BPMN</p>
                         </div>
                         <div class="col-md-6">
-                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="bin.svg" width="800" height="600"
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="bin-wsdl.svg" width="800"
+                                height="600"
                                 alt="Пример использования Sequece Diagramm для иллюстрации разбора BIN сообщений"
                                 loading="lazy" tabindex="0" role="button"
                                 aria-label="Открыть изображение во весь экран">
@@ -521,7 +517,7 @@
                     <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
                         aria-label="Закрыть"></button>
                 </div>
-                <div class="modal-body img-preview-modal-body p-2 p-md-3">
+                <div class="modal-body d-flex justify-content-center align-items-start p-2 p-md-3">
                     <img id="imagePreviewModalImg" class="img-enlarge-view rounded-1" src="" alt="">
                 </div>
             </div>
