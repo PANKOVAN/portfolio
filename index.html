@@ -362,46 +362,34 @@
             <div class="container">
                 <div class="project-card p-3 p-lg-4 mb-2">
                     <h2 class="h3 fw-bold text-dark mb-2">КИ-Ц САИ ПС.ИНП (документация)</h2>
-                    <p class="hero-lead mb-3 text-break">Ниже приведён пример оформления документации, вырванный из
-                        технического задания, с использованием диаграмм C4. Все диаграммы можно посмотреть по <a
-                            class="link-secondary" href="https://pankovan.github.io/C4/viewer/" target="_blank"
-                            rel="noopener noreferrer">ссылке</a></p>
-                    <p class="text-secondary-emphasis fst-italic mb-3">. . .</p>
-                    <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.3 Структура взаимодействия отдельных подсистем КИ Ц
-                        САИ ПС.ИНП со смежными системами ОАО «РЖД».</h3>
+                    <p class="text-secondary-emphasis mb-3"><a class="link-body-emphasis"
+                            href="https://pankovan.github.io/C4/viewer/" target="_blank"
+                            rel="noopener noreferrer">По этой ссылке</a> можно посмотреть примеры диаграмм C4
+                        подготовленные для вставки в ТЗ.</p>
 
                     <script type="module" src="https://pankovan.github.io/C4/viewer/likec4-views.js"></script>
                     <likec4-view view-id="index" browser="true" dynamic-variant="sequence"></likec4-view>
 
-                    <p class="hero-lead mb-3 mt-2">Рисунок 4 –Взаимодействие подсистем КИ-Ц САИ ПС.ИНП со смежными
-                        системами</p>
-                    <p class="text-secondary-emphasis mb-2">Сведения о проследовании подвижным составом пунктов
-                        считывания направляются КИ-Л САИ ПС в очередь бинарных сообщений P.SAIB, сведения о состоянии и
-                        работоспособности технических средств САИ ПС направляются КИ-Л САИ ПС в очередь бинарных
-                        сообщений P.SAIS, и должны приниматься из указанных очередей средствами КИ Ц САИ ПС.ИНП. Для
-                        тестового полигона должна быть организована средствами АСУ АОС специальная очередь исходящих
-                        сообщений, сформированная администратором АСУ АОС на основе ранее полученных сообщений.</p>
-                    <p class="text-secondary-emphasis mb-2">Исходящая информация о проследовании поездами остановочных
-                        пунктов должна передаваться КИ Ц САИ ПС.ИНП сообщениями 2033 в очередь выходных сообщений для
-                        отправки средствами АСУ АОС в АСОУП (АСОУП-3). Для тестового полигона выходной поток будет
-                        записываться в тестовую очередь MQ для анализа и просмотра.</p>
-                    <p class="text-secondary-emphasis mb-3">Для расшифровки и верификации состава поезда в КИ Ц САИ
-                        ПС.ИНП должна быть реализована функциональность запроса данных о составе поезда из АСОУП (с
-                        использованием хранимой процедуры АСОУП-3 / соответствующего сервиса ЕМД ПП).</p>
-                    <h3 class="h6 fw-semibold text-dark mb-2">4.1.1.4 Требования к механизмам диагностирования и
-                        мониторинга работы системы</h3>
-                    <p class="text-secondary-emphasis mb-2">Основной задачей системы мониторинга является
-                        автоматизированный контроль работоспособности системы как в целом, так и конкретных показателей
-                        функционирования в режиме времени, приближенном к реальному.<br>Мониторинг системы должен
-                        осуществляться на следующих уровнях:</p>
-                    <p class="text-secondary-emphasis fst-italic mb-3">. . .</p>
-                    <p class="hero-lead mb-2">Пример использования диаграмм BPMN</p>
+                    <p class="hero-lead mb-3 mt-2 text-break">Рисунок 4 –Взаимодействие подсистем КИ-Ц САИ ПС.ИНП со
+                        смежными системами</p>
+
+                    <p class="label-cap mb-2 mt-3 pt-1">Примеры экранов</p>
                     <div class="row g-3">
-                        <div class="col-md-8 col-lg-6">
+                        <div class="col-md-6">
                             <img class="img-fluid shot shot-enlarge w-100 mb-2" src="bpmn-kic-1.svg" width="800"
                                 height="600"
-                                alt="Сервисное обслуживания (СО) оборудования установленного на местах" loading="lazy"
-                                tabindex="0" role="button" aria-label="Открыть изображение во весь экран">
+                                alt="Сервисное обслуживания (СО) оборудования установленного на местах"
+                                loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Пример использования диаграмм BPMN</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid shot shot-enlarge w-100 mb-2" src="bin.svg" width="800" height="600"
+                                alt="Пример использования Sequece Diagramm для иллюстрации разбора BIN сообщений"
+                                loading="lazy" tabindex="0" role="button"
+                                aria-label="Открыть изображение во весь экран">
+                            <p class="hero-lead mb-0">Пример использования Sequece Diagramm для иллюстрации разбора BIN
+                                сообщений</p>
                         </div>
                     </div>
                 </div>
